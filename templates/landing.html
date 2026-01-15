@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Real Estate{% endblock %}
+
+{% block content %}
+<!-- 🔥 Hero Carousel -->
+<div id="heroCarousel"
+     class="carousel slide carousel-fade"
+     data-bs-ride="carousel"
+     data-bs-interval="3000">
+
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="{% static 'images/house3.jpg' %}" class="d-block w-100 hero-img">
+            <div class="carousel-caption text-start hero-box">
+                <h2>STUNNING 6 BED HOUSE</h2>
+                <h5>IN THE HEART OF THE CITY</h5>
+                <p>Luxury living with modern architecture and premium interiors.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="{% static 'images/house4.jpg' %}" class="d-block w-100 hero-img">
+            <div class="carousel-caption text-start hero-box">
+                <h2>MODERN VILLA</h2>
+                <h5>PERFECT FOR FAMILY</h5>
+                <p>Spacious rooms with beautiful outdoor views.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img src="{% static 'images/house5.jpg' %}" class="d-block w-100 hero-img">
+            <div class="carousel-caption text-start hero-box">
+                <h2>PREMIUM APARTMENT</h2>
+                <h5>URBAN LIFESTYLE</h5>
+                <p>Comfort meets elegance in city living.</p>
+            </div>
+        </div>
+
+        <!-- 🔹 Slide 4 (NEW) -->
+        <div class="carousel-item">
+            <img src="{% static 'images/house7.jpg' %}" class="d-block w-100 hero-img">
+            <div class="carousel-caption text-start hero-box">
+                <h2>LUXURY BEACH HOUSE</h2>
+                <h5>SEA VIEW PROPERTY</h5>
+                <p>Wake up to ocean views and premium lifestyle living.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button"
+            data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+            data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+<!-- Chat Button -->
+<a href="#" class="chat-btn">CHAT WITH US</a>
+<!-- 🏡 Featured Properties Section -->
+<section class="featured-properties py-5">
+    <div class="container">
+        <div class="text-center mb-4 px-2">
+            <h2 class="section-title">Featured Properties</h2>
+            <p class="section-subtitle">Handpicked homes for premium living</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Property 1 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="property-card h-100">
+                    <img src="{% static 'images/house3.jpg' %}" alt="Property">
+                    <div class="property-content">
+                        <h5>Luxury City Villa</h5>
+                        <p>₹1.2 Cr · 4 Beds · 3 Baths</p>
+                        <a href="#" class="btn btn-sm property-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property 2 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="property-card h-100">
+                    <img src="{% static 'images/house4.jpg' %}" alt="Property">
+                    <div class="property-content">
+                        <h5>Modern Family Home</h5>
+                        <p>₹95 L · 3 Beds · 2 Baths</p>
+                        <a href="#" class="btn btn-sm property-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property 3 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="property-card h-100">
+                    <img src="{% static 'images/house7.jpg' %}" alt="Property">
+                    <div class="property-content">
+                        <h5>Beach View House</h5>
+                        <p>₹2.5 Cr · Sea Facing</p>
+                        <a href="#" class="btn btn-sm property-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
