@@ -86,7 +86,7 @@
                     <div class="property-content">
                         <h5>Luxury City Villa</h5>
                         <p>₹1.2 Cr · 4 Beds · 3 Baths</p>
-                        <a href="#" class="btn btn-sm property-btn">View Details</a>
+                       
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                     <div class="property-content">
                         <h5>Modern Family Home</h5>
                         <p>₹95 L · 3 Beds · 2 Baths</p>
-                        <a href="#" class="btn btn-sm property-btn">View Details</a>
+                        
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                     <div class="property-content">
                         <h5>Beach View House</h5>
                         <p>₹2.5 Cr · Sea Facing</p>
-                        <a href="#" class="btn btn-sm property-btn">View Details</a>
+                      
                     </div>
                 </div>
             </div>
@@ -118,5 +118,180 @@
         </div>
     </div>
 </section>
+<section class="property-section">
 
+    <!-- CHASE AVENUE -->
+    <div class="property-row">
+        <div class="property-image">
+            <img src="{% static 'images/house1.avif' %}" alt="Chase Avenue">
+        </div>
+        <div class="property-content">
+            <h2>CHASE AVENUE</h2>
+            <span class="bed">4 Bedrooms</span>
+            <p>
+                A premium modern home with spacious interiors, natural lighting,
+                and elegant architecture. Ideal for families seeking comfort,
+                luxury, and privacy.
+            </p>
+            <span class="price">$500 / per week</span>
+        </div>
+    </div>
+
+    <!-- KINGS CLOSE -->
+    <div class="property-row">
+        <div class="property-content">
+            <h2>KINGS CLOSE</h2>
+            <span class="bed">3 Bedrooms</span>
+            <p>
+                A stylish contemporary residence featuring open-plan living,
+                quality finishes, and easy access to city amenities.
+            </p>
+            <span class="price">$420 / per week</span>
+        </div>
+        <div class="property-image">
+            <img src="{% static 'images/house2.avif' %}" alt="Kings Close">
+        </div>
+    </div>
+
+</section>
+
+<section class="trust-section">
+    <h2 class="trust-title">REALTORS YOU CAN TRUST</h2>
+
+    <div class="trust-grid">
+        <div class="trust-card">
+            <i class="fa-regular fa-clipboard trust-icon"></i>
+            <h4>FREE REGISTRATION<br>NO HIDDEN FEES</h4>
+            <p>
+                Register easily with no extra charges. We believe in
+                transparent pricing and complete trust.
+            </p>
+        </div>
+
+        <div class="trust-card">
+            <i class="fa-solid fa-layer-group trust-icon"></i>
+            <h4>PROPERTY APPRAISAL<br>FREE OF CHARGE</h4>
+            <p>
+                Get expert property valuation services at no cost,
+                helping you make informed decisions.
+            </p>
+        </div>
+
+        <div class="trust-card">
+            <i class="fa-solid fa-location-dot trust-icon"></i>
+            <h4>LARGE COVERAGE<br>4 LOCATIONS</h4>
+            <p>
+                Our offices operate across multiple locations,
+                ensuring better reach and support.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="testimonial-overlay"></div>
+
+    <div class="testimonial-content">
+        <h2>WHAT OUR CLIENTS THINK</h2>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <span class="quote">“</span>
+                <p>
+                    I'm a testimonial. Click to edit me and add text
+                    that says something nice about you and your services.
+                </p>
+                <h5>– Tina & James Heart</h5>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="quote">“</span>
+                <p>
+                    I'm a testimonial. Click to edit me and add text
+                    that says something nice about you and your services.
+                </p>
+                <h5>– Mary van den Reich</h5>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="quote">“</span>
+                <p>
+                    I'm a testimonial. Click to edit me and add text
+                    that says something nice about you and your services.
+                </p>
+                <h5>– Paul & Susan Taylor</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <h2 class="contact-title">CONTACT US</h2>
+
+    <div class="contact-container">
+        <!-- LEFT -->
+        <div class="contact-left">
+            <h4>ADDRESS</h4>
+
+            <p class="address-text">
+                500 Terry Francine Street<br>
+                San Francisco, CA 94158
+            </p>
+
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps?q=San+Francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <h4 class="agent-title">
+                TO SPEAK WITH AN AGENT,<br>
+                PLEASE CALL OR EMAIL US:
+            </h4>
+
+            <p class="contact-info">
+                Email: info@mysite.com<br>
+                Tel: 123-456-7890<br>
+                Fax: 123-456-7890
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-right">
+            <h4>
+                ALTERNATIVELY YOU CAN FILL<br>
+                IN THE FOLLOWING CONTACT FORM:
+            </h4>
+
+            <form class="contact-form">
+                <div class="form-row">
+                    <div>
+                        <label>First name *</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Last name *</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <label>Email *</label>
+                <input type="email">
+
+                <label>Subject</label>
+                <input type="text">
+
+                <label>Message</label>
+                <textarea rows="5"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Submit</button>
+                    <button type="button" class="btn-chat">CHAT WITH US</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 {% endblock %}
