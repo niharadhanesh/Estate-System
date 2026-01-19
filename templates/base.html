@@ -3,16 +3,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Real Estate{% endblock %}</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Custom CSS -->
@@ -20,65 +23,141 @@
 </head>
 <body>
 
-<!-- 🔹 Top Navbar -->
-<div class="top-navbar py-2">
-    <div class="container d-flex justify-content-between align-items-center">
-        <span class="fw-bold text-white">FABER & CO REAL ESTATE</span>
-        <div class="d-flex align-items-center gap-3">
-            <a href="#" class="text-white text-decoration-none">
-                <i class="bi bi-person-fill"></i> Log In
-            </a>
-            <a href="tel:1234567890" class="text-white text-decoration-none">
-                <i class="bi bi-telephone-fill"></i> 123-456-7890
-            </a>
+<!-- 🔹 Top Info Bar -->
+<div class="top-info-bar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="info-items">
+                    <span><i class="bi bi-geo-alt-fill"></i> San Francisco, CA</span>
+                    <span><i class="bi bi-envelope-fill"></i> info@faberco.com</span>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="social-links">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- 🔹 Main Navbar (Sticky) -->
-<nav class="navbar navbar-expand-lg main-navbar shadow-sm sticky-top">
+<!-- 🔹 Main Navigation -->
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
     <div class="container">
-        <a class="navbar-brand d-lg-none fw-bold text-dark" href="#">FABER & CO</a>
+        <a class="navbar-brand" href="#">
+            <span class="brand-icon">F&C</span>
+            <span class="brand-text">FABER & CO</span>
+        </a>
 
-        <!-- Navbar toggle button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" 
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-            <ul class="navbar-nav gap-4">
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+                    <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-people-fill"></i> Agents</a>
+                    <a class="nav-link" href="#">Properties</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-envelope-fill"></i> Contact</a>
+                    <a class="nav-link" href="#">Agents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-calendar-check-fill"></i> Book Online</a>
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a href="#" class="btn btn-gradient">
+                        <i class="bi bi-calendar-check"></i> Book Viewing
+                    </a>
                 </li>
             </ul>
-
-            <!-- Call button for large screens -->
-            <div class="d-none d-lg-flex align-items-center gap-2 ms-lg-3">
-                <a href="tel:1234567890" class="btn btn-outline-dark">
-                    <i class="bi bi-telephone-fill"></i> Call us
-                </a>
-            </div>
         </div>
     </div>
 </nav>
 
 {% block content %}{% endblock %}
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3 mt-5">
-    © 2026 Real Estate Management
+<!-- Modern Footer -->
+<footer class="modern-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="footer-brand">
+                    <h3>FABER & CO</h3>
+                    <p>Transforming houses into dream homes since 1995. Your trusted partner in luxury real estate.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5>Services</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Buy Property</a></li>
+                    <li><a href="#">Sell Property</a></li>
+                    <li><a href="#">Rent Property</a></li>
+                    <li><a href="#">Appraisal</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <h5>Newsletter</h5>
+                <p class="small">Subscribe to get the latest property updates</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button><i class="bi bi-send-fill"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Faber & Co Real Estate. All rights reserved.</p>
+        </div>
+    </div>
 </footer>
 
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Scroll Animation -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.main-navbar');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
+</script>
+
 </body>
 </html>
