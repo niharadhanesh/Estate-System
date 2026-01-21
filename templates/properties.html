@@ -1,0 +1,761 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Properties - Faber & Co{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1 class="display-3 fw-bold mb-3">Discover Your Dream Property</h1>
+            <p class="lead mb-4">Explore our curated collection of premium properties</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Properties</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Advanced Search Section -->
+<section class="search-section">
+    <div class="container">
+        <div class="search-card">
+            <ul class="nav nav-pills mb-4" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#buy">
+                        <i class="bi bi-house-door"></i> Buy
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#rent">
+                        <i class="bi bi-key"></i> Rent
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sell">
+                        <i class="bi bi-cash-stack"></i> Sell
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="buy">
+                    <div class="row g-3">
+                        <div class="col-lg-3 col-md-6">
+                            <input type="text" class="form-control" placeholder="Location">
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <select class="form-select">
+                                <option selected>Property Type</option>
+                                <option>House</option>
+                                <option>Apartment</option>
+                                <option>Villa</option>
+                                <option>Condo</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <select class="form-select">
+                                <option selected>Min Price</option>
+                                <option>$100,000</option>
+                                <option>$250,000</option>
+                                <option>$500,000</option>
+                                <option>$1,000,000</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <select class="form-select">
+                                <option selected>Max Price</option>
+                                <option>$500,000</option>
+                                <option>$1,000,000</option>
+                                <option>$2,000,000</option>
+                                <option>$5,000,000+</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-1 col-md-6">
+                            <select class="form-select">
+                                <option selected>Beds</option>
+                                <option>1+</option>
+                                <option>2+</option>
+                                <option>3+</option>
+                                <option>4+</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <button class="btn btn-gradient w-100">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="text-primary"><i class="bi bi-funnel"></i> Advanced Filters</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter & Sort Bar -->
+<section class="py-3 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0"><strong>247 Properties</strong> found</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="d-inline-flex gap-2 align-items-center">
+                    <span class="small">Sort by:</span>
+                    <select class="form-select form-select-sm" style="width: auto;">
+                        <option>Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Most Popular</option>
+                    </select>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-primary active">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-list-ul"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Properties Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Property Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Property">
+                        <div class="property-badges">
+                            <span class="badge-featured">Featured</span>
+                            <span class="badge-status">For Sale</span>
+                        </div>
+                        <button class="btn-favorite">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <div class="property-overlay">
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-camera"></i> View Photos
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-play-circle"></i> Virtual Tour
+                            </a>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">$1,245,000</div>
+                        <h4 class="property-title">Modern Luxury Villa</h4>
+                        <p class="property-location">
+                            <i class="bi bi-geo-alt"></i> 123 Park Avenue, San Francisco, CA
+                        </p>
+                        <div class="property-features">
+                            <span><i class="bi bi-door-open"></i> 4 Beds</span>
+                            <span><i class="bi bi-droplet"></i> 3 Baths</span>
+                            <span><i class="bi bi-arrows-angle-expand"></i> 3,500 sqft</span>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity-tag"><i class="bi bi-p-circle"></i> Parking</span>
+                            <span class="amenity-tag"><i class="bi bi-wifi"></i> WiFi</span>
+                            <span class="amenity-tag"><i class="bi bi-droplet"></i> Pool</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100" alt="Agent">
+                                <div>
+                                    <strong>Michael Anderson</strong>
+                                    <small>Senior Agent</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gradient btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600" alt="Property">
+                        <div class="property-badges">
+                            <span class="badge-status sale">For Rent</span>
+                        </div>
+                        <button class="btn-favorite active">
+                            <i class="bi bi-heart-fill"></i>
+                        </button>
+                        <div class="property-overlay">
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-camera"></i> View Photos
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-play-circle"></i> Virtual Tour
+                            </a>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">$4,500<small>/month</small></div>
+                        <h4 class="property-title">Elegant Downtown Apartment</h4>
+                        <p class="property-location">
+                            <i class="bi bi-geo-alt"></i> 456 Market Street, San Francisco, CA
+                        </p>
+                        <div class="property-features">
+                            <span><i class="bi bi-door-open"></i> 2 Beds</span>
+                            <span><i class="bi bi-droplet"></i> 2 Baths</span>
+                            <span><i class="bi bi-arrows-angle-expand"></i> 1,800 sqft</span>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity-tag"><i class="bi bi-building"></i> Gym</span>
+                            <span class="amenity-tag"><i class="bi bi-shield-check"></i> Security</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" alt="Agent">
+                                <div>
+                                    <strong>Sarah Williams</strong>
+                                    <small>Property Specialist</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gradient btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Property">
+                        <div class="property-badges">
+                            <span class="badge-status">For Sale</span>
+                        </div>
+                        <button class="btn-favorite">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <div class="property-overlay">
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-camera"></i> View Photos
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-play-circle"></i> Virtual Tour
+                            </a>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">$890,000</div>
+                        <h4 class="property-title">Cozy Family Home</h4>
+                        <p class="property-location">
+                            <i class="bi bi-geo-alt"></i> 789 Oak Street, San Francisco, CA
+                        </p>
+                        <div class="property-features">
+                            <span><i class="bi bi-door-open"></i> 3 Beds</span>
+                            <span><i class="bi bi-droplet"></i> 2 Baths</span>
+                            <span><i class="bi bi-arrows-angle-expand"></i> 2,200 sqft</span>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity-tag"><i class="bi bi-tree"></i> Garden</span>
+                            <span class="amenity-tag"><i class="bi bi-p-circle"></i> Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100" alt="Agent">
+                                <div>
+                                    <strong>David Martinez</strong>
+                                    <small>Real Estate Expert</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gradient btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600" alt="Property">
+                        <div class="property-badges">
+                            <span class="badge-featured">New Listing</span>
+                            <span class="badge-status">For Sale</span>
+                        </div>
+                        <button class="btn-favorite">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <div class="property-overlay">
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-camera"></i> View Photos
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-play-circle"></i> Virtual Tour
+                            </a>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">$2,150,000</div>
+                        <h4 class="property-title">Waterfront Luxury Estate</h4>
+                        <p class="property-location">
+                            <i class="bi bi-geo-alt"></i> 321 Beach Drive, San Francisco, CA
+                        </p>
+                        <div class="property-features">
+                            <span><i class="bi bi-door-open"></i> 5 Beds</span>
+                            <span><i class="bi bi-droplet"></i> 4 Baths</span>
+                            <span><i class="bi bi-arrows-angle-expand"></i> 4,800 sqft</span>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity-tag"><i class="bi bi-water"></i> Waterfront</span>
+                            <span class="amenity-tag"><i class="bi bi-droplet"></i> Pool</span>
+                            <span class="amenity-tag"><i class="bi bi-tree"></i> Garden</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" alt="Agent">
+                                <div>
+                                    <strong>Emily Chen</strong>
+                                    <small>Luxury Specialist</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gradient btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Property">
+                        <div class="property-badges">
+                            <span class="badge-status sale">For Rent</span>
+                        </div>
+                        <button class="btn-favorite">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <div class="property-overlay">
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-camera"></i> View Photos
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-play-circle"></i> Virtual Tour
+                            </a>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">$3,200<small>/month</small></div>
+                        <h4 class="property-title">Modern Studio Apartment</h4>
+                        <p class="property-location">
+                            <i class="bi bi-geo-alt"></i> 654 Union Square, San Francisco, CA
+                        </p>
+                        <div class="property-features">
+                            <span><i class="bi bi-door-open"></i> Studio</span>
+                            <span><i class="bi bi-droplet"></i> 1 Bath</span>
+                            <span><i class="bi bi-arrows-angle-expand"></i> 850 sqft</span>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity-tag"><i class="bi bi-wifi"></i> WiFi</span>
+                            <span class="amenity-tag"><i class="bi bi-building"></i> Gym</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Agent">
+                                <div>
+                                    <strong>James Thompson</strong>
+                                    <small>Rental Expert</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gradient btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600" alt="Property">
+                        <div class="property-badges">
+                            <span class="badge-status">For Sale</span>
+                        </div>
+                        <button class="btn-favorite">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <div class="property-overlay">
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-camera"></i> View Photos
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="bi bi-play-circle"></i> Virtual Tour
+                            </a>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">$1,680,000</div>
+                        <h4 class="property-title">Contemporary Penthouse</h4>
+                        <p class="property-location">
+                            <i class="bi bi-geo-alt"></i> 987 Skyline Boulevard, San Francisco, CA
+                        </p>
+                        <div class="property-features">
+                            <span><i class="bi bi-door-open"></i> 3 Beds</span>
+                            <span><i class="bi bi-droplet"></i> 3 Baths</span>
+                            <span><i class="bi bi-arrows-angle-expand"></i> 2,900 sqft</span>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity-tag"><i class="bi bi-building"></i> Rooftop</span>
+                            <span class="amenity-tag"><i class="bi bi-p-circle"></i> Parking</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=100" alt="Agent">
+                                <div>
+                                    <strong>Isabella Rodriguez</strong>
+                                    <small>Property Consultant</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gradient btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+      <!-- Pagination -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="{% url 'contact' %}"><i class="bi bi-chevron-left"></i></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="{% url 'landing' %}">1</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'properties' %}">2</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'agents' %}">3</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'about' %}">4</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'contact' %}">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'landing' %}"><i class="bi bi-chevron-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">Can't Find What You're Looking For?</h2>
+                <p class="mb-0">Our agents can help you find the perfect property that matches your needs</p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <a href="#" class="btn btn-light btn-lg">
+                    <i class="bi bi-person-lines-fill"></i> Contact an Agent
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.page-hero {
+    background: 
+                url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600') center/cover;
+    padding: 120px 0 80px;
+    position: relative;
+    color: white;
+}
+
+.page-hero .breadcrumb {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+}
+
+.page-hero .breadcrumb-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-section {
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 40px;
+}
+
+.search-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.nav-pills .nav-link {
+    border-radius: 10px;
+    padding: 12px 24px;
+    color: #6b7280;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.property-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+}
+
+.property-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.1);
+}
+
+.property-badges {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+}
+
+.badge-featured {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-status {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-status.sale {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.btn-favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    color: #6b7280;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.btn-favorite:hover,
+.btn-favorite.active {
+    color: #ef4444;
+    transform: scale(1.1);
+}
+
+.property-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.property-card:hover .property-overlay {
+    opacity: 1;
+}
+
+.property-info {
+    padding: 24px;
+}
+
+.property-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #6366f1;
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+}
+
+.property-price small {
+    font-size: 16px;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.property-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1f2937;
+    font-size: 20px;
+}
+
+.property-location {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.property-location i {
+    color: #6366f1;
+}
+
+.property-features {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 15px;
+}
+
+.property-features span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.property-features i {
+    color: #6366f1;
+    font-size: 16px;
+}
+
+.property-amenities {
+    margin-bottom: 15px;
+}
+
+.amenity-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    color: #6366f1;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.amenity-tag i {
+    font-size: 10px;
+}
+
+.property-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.agent-mini {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.agent-mini img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.agent-mini strong {
+    display: block;
+    font-size: 13px;
+    color: #1f2937;
+}
+
+.agent-mini small {
+    display: block;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    padding: 60px 0;
+    color: white;
+}
+
+.cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.pagination .page-link {
+    border: 2px solid #e5e7eb;
+    color: #6366f1;
+    margin: 0 4px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-color: #6366f1;
+}
+</style>
+
+{% endblock %}

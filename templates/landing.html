@@ -709,6 +709,25 @@
         </div>
     </div>
 </section>
+
+  <!-- Pagination -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="{% url 'contact' %}"><i class="bi bi-chevron-left"></i></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="{% url 'landing' %}">1</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'properties' %}">2</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'agents' %}">3</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'about' %}">4</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'contact' %}">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'landing' %}"><i class="bi bi-chevron-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
 <style>
     /* ========================================
    MODERN REAL ESTATE WEBSITE STYLES

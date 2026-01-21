@@ -1,0 +1,719 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us - Faber & Co{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1 class="display-3 fw-bold mb-3">Get In Touch</h1>
+            <p class="lead mb-4">We're here to help you find your perfect property</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info Cards -->
+<section class="contact-cards-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h4>Visit Our Office</h4>
+                    <p>123 Market Street, Suite 500<br>San Francisco, CA 94103</p>
+                    <a href="#" class="contact-link">Get Directions <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <h4>Call Us</h4>
+                    <p>Main: +1 (415) 555-0123<br>Sales: +1 (415) 555-0124</p>
+                    <a href="tel:+14155550123" class="contact-link">Call Now <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <h4>Email Us</h4>
+                    <p>info@faberco.com<br>support@faberco.com</p>
+                    <a href="mailto:info@faberco.com" class="contact-link">Send Email <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form & Map Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <div class="section-label">Send Us A Message</div>
+                <h2 class="display-5 fw-bold mb-4">Have Questions? We're Here to Help</h2>
+                <p class="text-muted mb-4">Fill out the form below and our team will get back to you within 24 hours.</p>
+                
+                <form class="contact-form">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-control" placeholder="John" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" placeholder="Doe" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">I'm Interested In *</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Select an option</option>
+                                <option>Buying a Property</option>
+                                <option>Selling a Property</option>
+                                <option>Renting a Property</option>
+                                <option>Property Appraisal</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Message *</label>
+                            <textarea class="form-control" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Subscribe to our newsletter for latest property updates
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-gradient btn-lg w-100">
+                                <i class="bi bi-send-fill"></i> Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="contact-features mt-4">
+                    <div class="feature-item">
+                        <i class="bi bi-clock"></i>
+                        <div>
+                            <strong>Quick Response</strong>
+                            <small>We typically respond within 2 hours</small>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>100% Secure</strong>
+                            <small>Your information is safe with us</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map & Office Hours -->
+            <div class="col-lg-6">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0197042489654!2d-122.39868668468204!3d37.79280897975681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807c470b7fff%3A0x41f8a6db06f3a8f1!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1642521234567!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 20px;" 
+                            allowfullscreen="" 
+                            loading="lazy"></iframe>
+                </div>
+
+                <div class="office-hours-card">
+                    <h4 class="mb-4"><i class="bi bi-clock-history"></i> Office Hours</h4>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">10:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">By Appointment Only</span>
+                        </div>
+                    </div>
+                    <div class="emergency-contact">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <p>For urgent matters outside business hours, please call our emergency line: <strong>+1 (415) 555-0199</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Offices Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">Our Locations</div>
+            <h2 class="display-5 fw-bold mb-3">Visit Our Offices</h2>
+            <p class="lead text-muted">We have multiple locations to serve you better</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400" alt="Office">
+                    </div>
+                    <div class="office-info">
+                        <h5>San Francisco HQ</h5>
+                        <p><i class="bi bi-geo-alt"></i> 123 Market Street, Suite 500</p>
+                        <p><i class="bi bi-telephone"></i> +1 (415) 555-0123</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400" alt="Office">
+                    </div>
+                    <div class="office-info">
+                        <h5>Oakland Office</h5>
+                        <p><i class="bi bi-geo-alt"></i> 456 Broadway, Suite 200</p>
+                        <p><i class="bi bi-telephone"></i> +1 (510) 555-0123</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400" alt="Office">
+                    </div>
+                    <div class="office-info">
+                        <h5>San Jose Office</h5>
+                        <p><i class="bi bi-geo-alt"></i> 789 First Street, Floor 3</p>
+                        <p><i class="bi bi-telephone"></i> +1 (408) 555-0123</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=400" alt="Office">
+                    </div>
+                    <div class="office-info">
+                        <h5>Palo Alto Office</h5>
+                        <p><i class="bi bi-geo-alt"></i> 321 University Ave, Suite 100</p>
+                        <p><i class="bi bi-telephone"></i> +1 (650) 555-0123</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="section-label">FAQ</div>
+                <h2 class="display-5 fw-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-muted mb-4">Find quick answers to common questions. Can't find what you're looking for? Contact us directly!</p>
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600" alt="FAQ" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-6">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What areas do you serve?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We serve the entire San Francisco Bay Area, including San Francisco, Oakland, San Jose, Palo Alto, and surrounding communities. Our team has deep knowledge of each local market.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How do I schedule a property viewing?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can schedule a viewing by clicking the "Book Viewing" button on any property listing, calling our office, or filling out the contact form above. We offer both in-person and virtual tours.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What are your commission rates?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our commission rates are competitive and vary depending on the property type and value. Contact us for a personalized quote and to discuss how we can provide the best value for your investment.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Do you offer property management services?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer comprehensive property management services including tenant screening, rent collection, maintenance coordination, and financial reporting. Contact us to learn more about our management packages.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                How long does it take to sell a property?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The timeline varies based on market conditions, property type, and pricing. On average, our listings sell within 30-60 days. We use strategic marketing and pricing to help you sell faster.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Pagination -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="{% url 'contact' %}"><i class="bi bi-chevron-left"></i></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="{% url 'landing' %}">1</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'properties' %}">2</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'agents' %}">3</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'about' %}">4</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'contact' %}">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'landing' %}"><i class="bi bi-chevron-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- Social Connect Section -->
+<section class="social-section">
+    <div class="container text-center">
+        <div class="section-label text-white">Stay Connected</div>
+        <h2 class="display-5 fw-bold mb-4 text-white">Follow Us on Social Media</h2>
+        <p class="lead text-white mb-4">Get the latest property updates, market insights, and exclusive offers</p>
+        <div class="social-buttons">
+            <a href="#" class="social-btn facebook">
+                <i class="bi bi-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="#" class="social-btn instagram">
+                <i class="bi bi-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="#" class="social-btn linkedin">
+                <i class="bi bi-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="#" class="social-btn twitter">
+                <i class="bi bi-twitter-x"></i>
+                <span>Twitter</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+.page-hero {
+    background: 
+                url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600') center/cover;
+    padding: 120px 0 80px;
+    position: relative;
+    color: white;
+}
+
+.page-hero .breadcrumb {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+}
+
+.page-hero .breadcrumb-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-cards-section {
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 60px;
+}
+
+.contact-info-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(99, 102, 241, 0.2);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    color: white;
+}
+
+.contact-info-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-info-card p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    gap: 8px;
+}
+
+.contact-link i {
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover i {
+    transform: translateX(5px);
+}
+
+.section-label {
+    color: #6366f1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.contact-features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    padding: 15px 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.feature-item i {
+    font-size: 24px;
+    color: #6366f1;
+}
+
+.feature-item strong {
+    display: block;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.feature-item small {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.map-container {
+    margin-bottom: 30px;
+}
+
+.office-hours-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.office-hours-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.office-hours-card h4 i {
+    color: #6366f1;
+}
+
+.hours-list {
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hours-item:last-child {
+    border-bottom: none;
+}
+
+.hours-item .day {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.hours-item .time {
+    color: #6366f1;
+    font-weight: 500;
+}
+
+.emergency-contact {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 12px;
+}
+
+.emergency-contact i {
+    color: #ef4444;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.emergency-contact p {
+    margin: 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.emergency-contact strong {
+    color: #ef4444;
+}
+
+.office-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.office-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+}
+
+.office-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.office-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.office-card:hover .office-image img {
+    transform: scale(1.1);
+}
+
+.office-info {
+    padding: 20px;
+}
+
+.office-info h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.office-info p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.office-info i {
+    color: #6366f1;
+    width: 18px;
+}
+
+.accordion-item {
+    border: 2px solid #e5e7eb;
+    border-radius: 15px !important;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: white;
+    color: #1f2937;
+    font-weight: 600;
+    padding: 20px;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    color: #6366f1;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 20px;
+    color: #6b7280;
+}
+
+.social-section {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    padding: 80px 0;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: white;
+    color: #1f2937;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.social-btn.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.social-btn.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+.social-btn.linkedin:hover {
+    background: #0077b5;
+    color: white;
+}
+
+.social-btn.twitter:hover {
+    background: #000000;
+    color: white;
+}
+
+.social-btn i {
+    font-size: 24px;
+}
+</style>
+
+{% endblock %}
